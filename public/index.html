@@ -3,6 +3,9 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Campus Market</title>
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#1a5c3a">
+<link rel="apple-touch-icon" href="/icon-192.png">
 <style>
   body{font-family:sans-serif;max-width:600px;margin:auto;padding:12px;background:#f4f6f8}
   h1{color:#1a5c3a}
@@ -123,6 +126,7 @@ async function sold(id){
   load();
 }
 ui(); load();
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js');
 </script>
 </body>
 </html>
